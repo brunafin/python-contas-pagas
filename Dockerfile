@@ -15,4 +15,4 @@ COPY . .
 ENV FLASK_APP=app.main
 
 # Comando para rodar a aplicação
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:3030", "app.main:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:3030", "src.main:app"]
