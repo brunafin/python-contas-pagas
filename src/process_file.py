@@ -1,7 +1,4 @@
-import read_file
-import write_file
-import remove_file
-import rename_file
+from src import read_file, write_file, remove_file, rename_file
 
 def process_file(file_id, service):
   content = read_file.read_pdf('src/files/comprovante.pdf')

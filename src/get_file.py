@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from googleapiclient.http import MediaIoBaseDownload
-import process_file
+from src import process_file
 import os
 import io
 

@@ -1,10 +1,9 @@
 import schedule
 import time
 from datetime import datetime
-import get_file
-import read_file
+from src import get_file, read_file
 from flask import Flask, request, jsonify, make_response
-from google_drive import google_drive_authentication
+from src.google_drive import google_drive_authentication
 import pandas as pd
 import json
 from flask_cors import CORS

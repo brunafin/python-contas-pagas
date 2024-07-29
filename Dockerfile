@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Define a variável de ambiente para que o Flask escute todas as interfaces
-ENV FLASK_APP=app.main
+ENV FLASK_APP=src.main
 
 # Comando para rodar a aplicação
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:3030", "src.main:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "src.main:app"]
