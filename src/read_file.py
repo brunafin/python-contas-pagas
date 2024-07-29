@@ -44,7 +44,7 @@ def read_pdf(path_file):
     convertToLine = f'''{data[-1].split('ID da transação: ')[1]};Pix;{convertedValueToFloat};{data[2].split('Favorecido: ')[1]};{data[3].split('realizado em ')[1].split(' ')[0]};'''
   elif tipo_comprovante == 'Pessoa':
     convertedValueToFloat = float(data[0].split('R$')[1].strip().replace('.',',').replace(',','.'))
-    convertToLine = f'''{data[-1].split('ID da transação: ')[1]};Pix;{convertedValueToFloat};{data[2].split('nome do favorecido ')[1]};{data[3].split(',')[0].split('realizado em ')[1]};'''
+    convertToLine = f'''{data[-1].split('ID da transação ')[1]};Pix;{convertedValueToFloat};{data[2].split('nome do favorecido ')[1]};{data[3].split(',')[0].split('realizado em ')[1]};'''
   else:
     print('Outro')
   return convertToLine
